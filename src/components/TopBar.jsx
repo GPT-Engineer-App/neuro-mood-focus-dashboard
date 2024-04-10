@@ -10,7 +10,9 @@ const TopBar = ({ onToggleSidebar, currentPage }) => {
       <Breadcrumb fontWeight="medium" fontSize="sm" color="white" flex={1}>
         <BreadcrumbItem>
           <RouterLink to="/">
-            <Image src="path/to/logo.png" alt="Logo" mr={8} />
+            <Text fontSize="xl" fontWeight="bold" color="white" mr={8}>
+              NeuroFlow
+            </Text>
           </RouterLink>
         </BreadcrumbItem>
         <BreadcrumbItem isCurrentPage>
