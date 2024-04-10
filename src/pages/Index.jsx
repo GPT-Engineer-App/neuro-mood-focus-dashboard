@@ -28,7 +28,7 @@ const Index = () => {
         {isSidebarOpen && <Sidebar />}
         <Box p={8} flex={1} overflowY="auto" ml={0} transition="margin-left 0.2s">
           <Heading as="h1" size="xl" mb={6}>
-            Neurosity Dashboard
+            Dashboard
           </Heading>
           <HStack spacing={8} alignItems="stretch">
             <VStack spacing={8} flex={1}>
