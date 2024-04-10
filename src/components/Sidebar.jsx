@@ -14,6 +14,36 @@ const Sidebar = () => {
             Dashboard
           </Text>
         </Link>
+        <Link to="/live-session">
+          <Text fontSize="lg" _hover={{ color: "blue.500" }}>
+            Live Session
+          </Text>
+        </Link>
+        <Link to="/past-sessions">
+          <Text fontSize="lg" _hover={{ color: "blue.500" }}>
+            Past Sessions
+          </Text>
+        </Link>
+        <Link to="/insights">
+          <Text fontSize="lg" _hover={{ color: "blue.500" }}>
+            Insights
+          </Text>
+        </Link>
+        <Link to="/meditation">
+          <Text fontSize="lg" _hover={{ color: "blue.500" }}>
+            Meditation
+          </Text>
+        </Link>
+        <Link to="/neurofeedback-games">
+          <Text fontSize="lg" _hover={{ color: "blue.500" }}>
+            Neurofeedback Games
+          </Text>
+        </Link>
+        <Link to="/settings">
+          <Text fontSize="lg" _hover={{ color: "blue.500" }}>
+            Settings
+          </Text>
+        </Link>
       </VStack>
     </Box>
   );
