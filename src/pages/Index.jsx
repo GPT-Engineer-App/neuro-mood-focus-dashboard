@@ -16,10 +16,11 @@ const Index = () => {
   ];
 
   return (
-    <HStack spacing={0} align="stretch" h="100vh">
-      <Sidebar />
+    <VStack spacing={0} align="stretch" h="100vh">
       <TopBar />
-      <Box p={8} flex={1} overflowY="auto">
+      <HStack spacing={0} align="stretch" flex={1}>
+        <Sidebar />
+        <Box p={8} flex={1} overflowY="auto">
         <Heading as="h1" size="xl" mb={6}>
           Neurosity Dashboard
         </Heading>
@@ -106,7 +107,8 @@ const Index = () => {
           </Card>
         </HStack>
       </Box>
-    </HStack>
+      </HStack>
+    </VStack>
   );
 };
 
