@@ -6,7 +6,7 @@ import { FaHome, FaPlayCircle, FaHistory, FaChartBar, FaHeadphones, FaGamepad, F
 const Sidebar = () => {
   return (
     <Box bg="gray.50" borderRight="1px" borderColor="gray.200">
-      <VStack align="stretch">
+      <VStack align="stretch" pt={4}>
         <Link to="/">
           <Button variant="ghost" size="lg" justifyContent="flex-start" _hover={{ bg: "gray.100" }} rounded="md" py={2} width="100%" leftIcon={<FaHome />}>
             Dashboard
