@@ -23,7 +23,7 @@ const Index = () => {
 
   return (
     <VStack spacing={0} align="stretch" h="100vh" display="flex">
-      <TopBar onToggleSidebar={toggleSidebar} />
+      <TopBar onToggleSidebar={toggleSidebar} currentPage="Dashboard" />
       <HStack spacing={0} align="stretch" flex={1}>
         {isSidebarOpen && <Sidebar />}
         <Box p={8} flex={1} overflowY="auto" ml={0} transition="margin-left 0.2s">

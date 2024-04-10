@@ -2,7 +2,7 @@ import React from "react";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Menu, MenuButton, MenuList, MenuItem, IconButton, Flex, Box, Image, HStack, Button, Text } from "@chakra-ui/react";
 import { FaUser, FaBars, FaCrown } from "react-icons/fa";
 
-const TopBar = ({ onToggleSidebar }) => {
+const TopBar = ({ onToggleSidebar, currentPage }) => {
   return (
     <Flex justifyContent="space-between" alignItems="center" bg="blue.500" p={4} boxShadow="sm">
       <IconButton icon={<FaBars />} variant="ghost" color="white" onClick={onToggleSidebar} mr={4} />
@@ -12,7 +12,7 @@ const TopBar = ({ onToggleSidebar }) => {
           <BreadcrumbLink href="/">Home</BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbItem isCurrentPage>
-          <BreadcrumbLink href="/">Dashboard</BreadcrumbLink>
+          <BreadcrumbLink href="/">{currentPage}</BreadcrumbLink>
         </BreadcrumbItem>
       </Breadcrumb>
       <HStack spacing={4}>
