@@ -15,7 +15,7 @@ const NeurofeedbackGames = () => {
       <TopBar onToggleSidebar={toggleSidebar} currentPage="Neurofeedback" />
       <HStack spacing={0} align="stretch" flex={1}>
         {isSidebarOpen && <Sidebar />}
-        <Box p={8} flex={1} overflowY="auto" ml={0} transition="margin-left 0.2s">
+        <Box p={8} flex={1} overflowY="auto" ml={0} transition="margin-left 0.2s" bg="gray.50">
           <Heading as="h1" size="xl" mb={6}>
             Neurofeedback
           </Heading>
