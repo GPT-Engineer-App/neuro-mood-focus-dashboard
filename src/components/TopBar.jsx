@@ -1,10 +1,11 @@
 import React from "react";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Menu, MenuButton, MenuList, MenuItem, IconButton, Flex, Box, Image } from "@chakra-ui/react";
-import { FaUser } from "react-icons/fa";
+import { FaUser, FaBars } from "react-icons/fa";
 
-const TopBar = () => {
+const TopBar = ({ onToggleSidebar }) => {
   return (
     <Flex justifyContent="space-between" alignItems="center" bg="blue.500" p={4} boxShadow="sm">
+      <IconButton icon={<FaBars />} variant="ghost" color="white" onClick={onToggleSidebar} mr={4} />
       <Image src="path/to/logo.png" alt="Logo" mr={8} />
       <Breadcrumb fontWeight="medium" fontSize="sm" color="white" flex={1}>
         <BreadcrumbItem>
