@@ -67,7 +67,9 @@ const Index = () => {
                   <Heading size="md">Raw EEG Data</Heading>
                 </CardHeader>
                 <CardBody>
-                  <Text>Raw EEG data visualization coming soon!</Text>
+                  <Box bg="gray.100" borderRadius="md" h={48} display="flex" alignItems="center" justifyContent="center">
+                    <Text>Raw EEG data visualization coming soon!</Text>
+                  </Box>
                 </CardBody>
               </Card>
             </Box>
