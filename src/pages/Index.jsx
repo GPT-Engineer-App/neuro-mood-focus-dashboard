@@ -22,7 +22,7 @@ const Index = () => {
   ];
 
   return (
-    <VStack spacing={0} align="stretch" h="100vh">
+    <VStack spacing={0} align="stretch" h="100vh" display="flex">
       <TopBar onToggleSidebar={toggleSidebar} />
       <HStack spacing={0} align="stretch" flex={1}>
         {isSidebarOpen && <Sidebar />}
