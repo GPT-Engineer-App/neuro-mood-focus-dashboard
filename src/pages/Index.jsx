@@ -26,7 +26,7 @@ const Index = () => {
       <TopBar onToggleSidebar={toggleSidebar} />
       <HStack spacing={0} align="stretch" flex={1}>
         {isSidebarOpen && <Sidebar />}
-        <Box p={8} flex={1} overflowY="auto" ml={isSidebarOpen ? "250px" : "0"} transition="margin-left 0.3s ease-in-out">
+        <Box p={8} flex={1} overflowY="auto" ml={isSidebarOpen ? "250px" : "0"} transition="margin-left 0.2s">
           <Heading as="h1" size="xl" mb={6}>
             Neurosity Dashboard
           </Heading>
