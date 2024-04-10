@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Box, VStack, HStack, Text, Button, Card, CardHeader, CardBody, Heading, Stat, StatLabel, StatNumber, StatHelpText, StatArrow } from "@chakra-ui/react";
+import { Box, VStack, HStack, Text, Button, Card, CardHeader, CardBody, Heading, Stat, StatLabel, StatNumber, StatHelpText, StatArrow, Link } from "@chakra-ui/react";
+import { Link as RouterLink } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import TopBar from "../components/TopBar";
 import { FaBrain, FaPlayCircle } from "react-icons/fa";
@@ -95,6 +96,19 @@ const Index = () => {
               </CardBody>
             </Card>
           </HStack>
+          <Card mt={8}>
+            <CardBody>
+              <VStack spacing={4} align="stretch">
+                <Heading size="md">Past Sessions</Heading>
+                <Box bg="gray.100" borderRadius="md" h={48} display="flex" alignItems="center" justifyContent="center">
+                  <Text>Calendar visualization coming soon!</Text>
+                </Box>
+                <Button as={RouterLink} to="/past-sessions" variant="link" colorScheme="blue" alignSelf="flex-start">
+                  View Past Sessions
+                </Button>
+              </VStack>
+            </CardBody>
+          </Card>
         </Box>
       </HStack>
     </VStack>
