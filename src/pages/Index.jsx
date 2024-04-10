@@ -15,9 +15,9 @@ const Index = () => {
   ];
 
   return (
-    <HStack spacing={0} align="start">
+    <HStack spacing={0} align="stretch" h="100vh">
       <Sidebar />
-      <Box p={8} flex={1}>
+      <Box p={8} flex={1} overflowY="auto">
         <Heading as="h1" size="xl" mb={8}>
           Neurosity Dashboard
         </Heading>
