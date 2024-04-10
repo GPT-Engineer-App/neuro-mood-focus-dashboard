@@ -39,39 +39,22 @@ const Index = () => {
                 <CardBody>
                   <HStack spacing={8}>
                     <Stat>
-                      <StatLabel>Mood</StatLabel>
+                      <StatLabel>Current Mood</StatLabel>
                       <StatNumber>{moodData.score * 100}%</StatNumber>
                       <StatHelpText>{moodData.label}</StatHelpText>
+                      <StatHelpText>
+                        <StatArrow type={moodData.score >= usualMoodData.score ? "increase" : "decrease"} />
+                        {Math.round(Math.abs(moodData.score - usualMoodData.score) * 100)}%{moodData.score >= usualMoodData.score ? " better than usual" : " worse than usual"}
+                      </StatHelpText>
                     </Stat>
                     <Stat>
-                      <StatLabel>Focus</StatLabel>
+                      <StatLabel>Current Focus</StatLabel>
                       <StatNumber>{focusData.score * 100}%</StatNumber>
                       <StatHelpText>{focusData.label}</StatHelpText>
-                    </Stat>
-                  </HStack>
-                </CardBody>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <Heading size="md">Compared to Usual</Heading>
-                </CardHeader>
-                <CardBody>
-                  <HStack spacing={8}>
-                    <Stat>
-                      <StatLabel>Mood</StatLabel>
-                      <StatNumber>
-                        <StatArrow type={moodData.score >= usualMoodData.score ? "increase" : "decrease"} />
-                        {Math.round(Math.abs(moodData.score - usualMoodData.score) * 100)}%
-                      </StatNumber>
-                      <StatHelpText>{moodData.score >= usualMoodData.score ? "Better mood than usual" : "Worse mood than usual"}</StatHelpText>
-                    </Stat>
-                    <Stat>
-                      <StatLabel>Focus</StatLabel>
-                      <StatNumber>
+                      <StatHelpText>
                         <StatArrow type={focusData.score >= usualFocusData.score ? "increase" : "decrease"} />
-                        {Math.round(Math.abs(focusData.score - usualFocusData.score) * 100)}%
-                      </StatNumber>
-                      <StatHelpText>{focusData.score >= usualFocusData.score ? "Better focus than usual" : "Worse focus than usual"}</StatHelpText>
+                        {Math.round(Math.abs(focusData.score - usualFocusData.score) * 100)}%{focusData.score >= usualFocusData.score ? " better than usual" : " worse than usual"}
+                      </StatHelpText>
                     </Stat>
                   </HStack>
                 </CardBody>
