@@ -1,15 +1,17 @@
 import React from "react";
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Menu, MenuButton, MenuList, MenuItem, IconButton, Flex, Box, Image, HStack, Button, Text } from "@chakra-ui/react";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Menu, MenuButton, MenuList, MenuItem, IconButton, Flex, Box, Image, HStack, Button, Text, Link } from "@chakra-ui/react";
+import { Link as RouterLink } from "react-router-dom";
 import { FaUser, FaBars, FaCrown } from "react-icons/fa";
 
 const TopBar = ({ onToggleSidebar, currentPage }) => {
   return (
     <Flex justifyContent="space-between" alignItems="center" bg="blue.500" p={4} boxShadow="sm">
       <IconButton icon={<FaBars />} variant="ghost" color="white" onClick={onToggleSidebar} mr={4} />
-      <Image src="path/to/logo.png" alt="Logo" mr={8} />
       <Breadcrumb fontWeight="medium" fontSize="sm" color="white" flex={1}>
         <BreadcrumbItem>
-          <BreadcrumbLink href="/">Home</BreadcrumbLink>
+          <RouterLink to="/">
+            <Image src="path/to/logo.png" alt="Logo" mr={8} />
+          </RouterLink>
         </BreadcrumbItem>
         <BreadcrumbItem isCurrentPage>
           <BreadcrumbLink href="/">{currentPage}</BreadcrumbLink>
