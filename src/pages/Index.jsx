@@ -34,12 +34,12 @@ const Index = () => {
             <VStack spacing={8} flex={1}>
               <Card>
                 <CardHeader>
-                  <Heading size="md">Current Mood & Focus</Heading>
+                  <Heading size="md">Mood & Focus</Heading>
                 </CardHeader>
                 <CardBody>
                   <HStack spacing={8}>
                     <Stat>
-                      <StatLabel>Current Mood</StatLabel>
+                      <StatLabel>Mood</StatLabel>
                       <StatNumber>{moodData.score * 100}%</StatNumber>
                       <StatHelpText>{moodData.label}</StatHelpText>
                       <StatHelpText>
@@ -48,7 +48,7 @@ const Index = () => {
                       </StatHelpText>
                     </Stat>
                     <Stat>
-                      <StatLabel>Current Focus</StatLabel>
+                      <StatLabel>Focus</StatLabel>
                       <StatNumber>{focusData.score * 100}%</StatNumber>
                       <StatHelpText>{focusData.label}</StatHelpText>
                       <StatHelpText>
