@@ -1,6 +1,7 @@
 import { Box, VStack, HStack, Text, Button, Card, CardHeader, CardBody, Heading, Stat, StatLabel, StatNumber, StatHelpText, StatArrow } from "@chakra-ui/react";
 import Sidebar from "../components/Sidebar";
-import { FaBrain, FaChartLine, FaPlayCircle } from "react-icons/fa";
+import TopBar from "../components/TopBar";
+import { FaBrain, FaPlayCircle } from "react-icons/fa";
 
 const Index = () => {
   // Sample data for demonstration purposes
@@ -17,8 +18,9 @@ const Index = () => {
   return (
     <HStack spacing={0} align="stretch" h="100vh">
       <Sidebar />
+      <TopBar />
       <Box p={8} flex={1} overflowY="auto">
-        <Heading as="h1" size="xl" mb={8}>
+        <Heading as="h1" size="xl" mb={6}>
           Neurosity Dashboard
         </Heading>
         <HStack spacing={8} alignItems="stretch">
