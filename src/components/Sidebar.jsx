@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 const Sidebar = () => {
   return (
     <Box bg="gray.50" p={6} borderRight="1px" borderColor="gray.200">
-      <VStack spacing={4} align="stretch">
+      <VStack align="stretch">
         <Link to="/">
-          <Button variant="ghost" size="lg" justifyContent="flex-start" _hover={{ bg: "gray.100" }} rounded="md" px={4} py={2} w="100%">
+          <Button variant="ghost" size="lg" justifyContent="flex-start" _hover={{ bg: "gray.100" }} rounded="md" px={2} py={2} width="100%">
             Dashboard
           </Button>
         </Link>
