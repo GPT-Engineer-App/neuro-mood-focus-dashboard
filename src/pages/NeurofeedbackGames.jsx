@@ -12,12 +12,12 @@ const NeurofeedbackGames = () => {
 
   return (
     <VStack spacing={0} align="stretch" h="100vh" display="flex">
-      <TopBar onToggleSidebar={toggleSidebar} currentPage="Neurofeedback Games" />
+      <TopBar onToggleSidebar={toggleSidebar} currentPage="Neurofeedback" />
       <HStack spacing={0} align="stretch" flex={1}>
         {isSidebarOpen && <Sidebar />}
         <Box p={8} flex={1} overflowY="auto" ml={0} transition="margin-left 0.2s">
           <Heading as="h1" size="xl" mb={6}>
-            Neurofeedback Games
+            Neurofeedback
           </Heading>
           <p>This is a placeholder for the Neurofeedback Games page.</p>
         </Box>

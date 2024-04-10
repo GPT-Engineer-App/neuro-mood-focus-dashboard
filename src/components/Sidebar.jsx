@@ -33,7 +33,7 @@ const Sidebar = () => {
         </Link>
         <Link to="/neurofeedback-games">
           <Button variant="ghost" size="lg" justifyContent="flex-start" _hover={{ bg: "gray.100" }} rounded="md" px={4} py={2} w="100%">
-            Neurofeedback Games
+            Neurofeedback
           </Button>
         </Link>
         <Link to="/settings">
