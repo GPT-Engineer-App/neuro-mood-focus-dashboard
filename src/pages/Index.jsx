@@ -49,7 +49,7 @@ const Index = () => {
                   <StatLabel>Mood</StatLabel>
                   <StatNumber>
                     <StatArrow type={moodData.score >= usualMoodData.score ? "increase" : "decrease"} />
-                    {Math.abs(moodData.score - usualMoodData.score) * 100}%
+                    {Math.round(Math.abs(moodData.score - usualMoodData.score) * 100)}%
                   </StatNumber>
                   <StatHelpText>{moodData.score >= usualMoodData.score ? "Better mood than usual" : "Worse mood than usual"}</StatHelpText>
                 </Stat>
@@ -57,7 +57,7 @@ const Index = () => {
                   <StatLabel>Focus</StatLabel>
                   <StatNumber>
                     <StatArrow type={focusData.score >= usualFocusData.score ? "increase" : "decrease"} />
-                    {Math.abs(focusData.score - usualFocusData.score) * 100}%
+                    {Math.round(Math.abs(focusData.score - usualFocusData.score) * 100)}%
                   </StatNumber>
                   <StatHelpText>{focusData.score >= usualFocusData.score ? "Better focus than usual" : "Worse focus than usual"}</StatHelpText>
                 </Stat>
