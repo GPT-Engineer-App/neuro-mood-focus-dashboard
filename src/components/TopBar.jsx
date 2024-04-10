@@ -1,6 +1,6 @@
 import React from "react";
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Menu, MenuButton, MenuList, MenuItem, IconButton, Flex, Box, Image } from "@chakra-ui/react";
-import { FaUser, FaBars } from "react-icons/fa";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Menu, MenuButton, MenuList, MenuItem, IconButton, Flex, Box, Image, HStack, Button, Text } from "@chakra-ui/react";
+import { FaUser, FaBars, FaCrown } from "react-icons/fa";
 
 const TopBar = ({ onToggleSidebar }) => {
   return (
@@ -15,7 +15,20 @@ const TopBar = ({ onToggleSidebar }) => {
           <BreadcrumbLink href="/">Dashboard</BreadcrumbLink>
         </BreadcrumbItem>
       </Breadcrumb>
-      <Box>
+      <HStack spacing={4}>
+        <Menu>
+          <MenuButton as={Button} rightIcon={<FaCrown />} variant="solid" bg="white" color="blue.500">
+            Devices
+          </MenuButton>
+          <MenuList>
+            <MenuItem icon={<FaCrown />}>
+              Neurosity Crown{" "}
+              <Text as="span" color="green.500" ml={2}>
+                Connected
+              </Text>
+            </MenuItem>
+          </MenuList>
+        </Menu>
         <Menu>
           <MenuButton as={IconButton} aria-label="Options" icon={<FaUser />} variant="solid" bg="white" color="blue.500" />
           <MenuList>
@@ -23,7 +36,7 @@ const TopBar = ({ onToggleSidebar }) => {
             <MenuItem>Logout</MenuItem>
           </MenuList>
         </Menu>
-      </Box>
+      </HStack>
     </Flex>
   );
 };
